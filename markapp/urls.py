@@ -20,5 +20,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('markapp/', include('home.urls')),
+    path('users/', include('users.urls')),
     path('admin/', admin.site.urls),
+    path('accounts/', include('django_registration.backends.activation.urls')),
+    path('accounts/', include('django.contrib.auth.urls')),
 ] 

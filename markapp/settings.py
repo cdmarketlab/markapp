@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1bp2b_2@f)7%_*z2k!igjxyl^z5i4sh3nvbyf7qj0w6!$=okr%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,8 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'users',
+    "crispy_forms",
 ]
 
+ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
+CRISPY_TEMPLATE_PACK="bootstrap4"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
