@@ -134,3 +134,10 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.hostinger.com' # reemplazar con el servidor SMTP de su proveedor de correo electrónico
+EMAIL_PORT = 465 # el puerto predeterminado para SMTP es 587
+EMAIL_USE_TLS = True # use TLS para conexiones seguras
+EMAIL_HOST_USER = 'info@marketlab.tech' # dirección de correo electrónico desde la que se enviarán los correos electrónicos
+EMAIL_HOST_PASSWORD = 'Tewkix22@' # la contraseña de la cuenta de correo electrónico
